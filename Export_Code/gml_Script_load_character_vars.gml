@@ -43,7 +43,6 @@ repeat (400)
     i -= 1
     global.event[i] = 0
 }
-global.save_room = 0
 global.monstersleft = 55
 global.monstersarea = 1
 global.progress = 0

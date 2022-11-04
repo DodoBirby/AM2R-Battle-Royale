@@ -9,6 +9,8 @@ if (global.saxmode && global.sax)
 }
 global.ingame = 1
 global.timeofday = 0
+global.save_room = irandom_range(3, 10)
+set_start_location()
 reset_map()
 init_map()
 load_character_vars()
