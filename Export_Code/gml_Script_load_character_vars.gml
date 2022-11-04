@@ -7,18 +7,16 @@ global.screwattack = 0
 global.hijump = 0
 global.spiderball = 0
 global.speedbooster = 0
-global.bomb = 0
+global.bomb = 1
 global.ibeam = 0
 global.wbeam = 0
 global.pbeam = 0
 global.sbeam = 0
 global.cbeam = 0
-global.missiles = 30
-global.missiles = oControl.mod_Mstartingcount
+global.missiles = 5
 global.smissiles = 0
 global.pbombs = 0
-global.maxmissiles = 30
-global.maxmissiles = oControl.mod_Mstartingcount
+global.maxmissiles = 5
 global.maxsmissiles = 0
 global.maxpbombs = 0
 global.currentweapon = 0
@@ -59,6 +57,7 @@ repeat (350)
     i -= 1
     global.item[i] = 0
 }
+global.item[0] = 1
 global.item[1] = 1
 reset_logs_list()
 reset_hints()
