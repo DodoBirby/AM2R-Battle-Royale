@@ -18,6 +18,7 @@ if visible
 }
 global.itemtype = itemtype
 display_itemmsg(text1, text2, btn1_name, btn2_name)
+sfx_play(sndMessage)
 if (global.chozo_message_item_id == itemid)
     oControl.chozomessage++
 instance_destroy()
