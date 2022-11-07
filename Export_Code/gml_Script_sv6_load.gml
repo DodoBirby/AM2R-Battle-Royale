@@ -70,13 +70,13 @@ else
     global.playerhealth = global.maxhealth
     if (global.difficulty < 2)
     {
-        global.maxmissiles = (oControl.mod_Mstartingcount + (global.mtanks * 5))
+        global.maxmissiles = (5 + (global.mtanks * 5))
         global.maxsmissiles = (global.stanks * 2)
         global.maxpbombs = (global.ptanks * 2)
     }
     else
     {
-        global.maxmissiles = (oControl.mod_Mstartingcount + (global.mtanks * 2))
+        global.maxmissiles = (5 + (global.mtanks * 2))
         global.maxsmissiles = global.stanks
         global.maxpbombs = global.ptanks
     }
