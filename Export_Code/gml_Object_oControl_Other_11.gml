@@ -27,7 +27,7 @@ global.ingame = 0
 global.darkness = 0
 global.gotolog = -1
 global.transitiontype = 3
-if (global.saxmode && (!global.sax))
+if global.lobbyLocked
     global.spectatorOption = 1
 if (global.spectatorOption && global.lobbyLocked)
 {
