@@ -510,23 +510,17 @@ if (global.classicmode == 0 && global.opshowhud)
     }
     if global.ophudshowmetrcount
     {
-        if (global.saxmode && global.sax)
+        draw_background(bgSamCount, ((xoff - 20) + widescreen_space), 4)
+        draw_text(((xoff - 18) + widescreen_space), 21, to_string_lz(global.samCount))
+        if (global.ophudshowmetrcount == 1)
         {
-            draw_background(bgSamCount, ((xoff + 4) + widescreen_space), 4)
-            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.samCount))
+            draw_background(bgGUIMetCountBG1, ((xoff + 4) + widescreen_space), 4)
+            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersarea))
         }
-        else
+        if (global.ophudshowmetrcount == 2)
         {
-            if (global.ophudshowmetrcount == 1)
-            {
-                draw_background(bgGUIMetCountBG1, ((xoff + 4) + widescreen_space), 4)
-                draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersarea))
-            }
-            if (global.ophudshowmetrcount == 2)
-            {
-                draw_background(bgGUIMetCountBG2, ((xoff + 4) + widescreen_space), 4)
-                draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersleft))
-            }
+            draw_background(bgGUIMetCountBG2, ((xoff + 4) + widescreen_space), 4)
+            draw_text(((xoff + 6) + widescreen_space), 21, to_string_lz(global.monstersleft))
         }
     }
     if global.ophudshowmap

@@ -3,7 +3,7 @@ if global.enablecontrol
     chStepControl()
 if global.movingobj
     chStepMovingCheck()
-if (!global.lobbyLocked)
+if ((!global.lobbyLocked) && instance_exists(oClient))
 {
     xVel = 0
     yVel = 0
