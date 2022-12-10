@@ -364,6 +364,8 @@ switch type_event
                 checkFreeze = buffer_read(_buffer, buffer_u8)
                 if (checkMissile && global.playerFreeze > 151)
                     break
+                else if (room == rm_transition)
+                    break
                 else
                 {
                     if (instance_exists(oCharacter) && oCharacter.invincible == 0)
