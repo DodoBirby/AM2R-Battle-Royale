@@ -837,6 +837,7 @@ switch type_event
                             buffer_write(buffer, buffer_u8, checkFreeze)
                             if (tempSocket != -100)
                                 network_send_packet(tempSocket, buffer, buffer_tell(buffer))
+                            g = ds_list_size(lagPositions)
                         }
                     }
                 }
