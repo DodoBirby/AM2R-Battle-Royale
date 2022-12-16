@@ -1321,6 +1321,7 @@ switch type_event
                                         {
                                             if (i == itemArr[f, 1])
                                             {
+                                                global.playerItems[findID, i] = itemArr[f, 0]
                                                 if (global.itemSamus[i] != itemArr[f, 0] && itemArr[f, 0] == 1)
                                                     global.itemSamus[i] = itemArr[f, 0]
                                             }
@@ -2433,11 +2434,15 @@ switch type_event
                     network_send_packet(ds_list_find_value(playerList, i), buffer, buffer_tell(buffer))
                 break
             case 36:
+                clientID = buffer_read(_buffer, buffer_u8)
+                attackID = buffer_read(_buffer, buffer_u8)
                 mirror = buffer_read(_buffer, buffer_s8)
                 sentRoom = buffer_read(_buffer, buffer_s16)
                 playerX = buffer_read(_buffer, buffer_s16)
                 playerY = buffer_read(_buffer, buffer_s16)
                 sax = buffer_read(_buffer, buffer_s8)
+                for (i = 0; i < 351; i++)
+                    global.playerItems[attackID, i] = global.playerItems[clientID, i]
                 buffer_delete(buffer)
                 size = 1024
                 type = buffer_grow

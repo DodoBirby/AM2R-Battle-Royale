@@ -66,3 +66,5 @@ global.totalItemCount = 0
 for (i = 0; i < array_length_1d(global.FFAItemCounter); i++)
     global.FFAItemCounter[i] = 0
 scr_default_global_items()
+for (i = 0; i < 17; i++)
+    global.playerItems[i, 350] = 0
