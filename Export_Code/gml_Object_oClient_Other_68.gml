@@ -1695,8 +1695,6 @@ switch type_event
                             popup_text(((get_text("Items", "PlasmaBeam") + " ") + get_text("GlobalOptions", "Enabled")))
                         }
                     }
-                    else if (receivedItem == 0 && global.item[i] == 1)
-                        resend = 1
                 }
                 etankCount = 0
                 for (i = 0; i < array_length_1d(global.item); i++)
