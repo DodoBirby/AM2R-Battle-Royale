@@ -12,7 +12,7 @@ if (enabled == 0 && image_index > 0.2)
     image_index -= 0.2
 if (saveenabled == 1 && cansave == 1 && (oCharacter.state == 10 || oCharacter.state == 12) && (oCharacter.statetime >= 10 || oControl.kUp))
 {
-    if (oControl.mod_insanitymode == 1 || global.enemyNearby || global.saveStationCooldown > 0)
+    if (oControl.mod_insanitymode == 1 || global.enemyNearby || global.saveStationCooldown > 0 || global.usedSave[global.save_room] == 1)
         exit
     global.savexpos = (x + 16)
     saveenabled = 0
@@ -30,6 +30,9 @@ if (saveenabled == 1 && cansave == 1 && (oCharacter.state == 10 || oCharacter.st
     global.start_room = room
     global.save_x = (x + 16)
     global.save_y = y
+    global.usedSave[global.save_room] = 1
 }
 if (oCharacter.state == 33 && distance_to_point(oCharacter.x, oCharacter.y < 64))
     saveenabled = 0
+if (global.usedSave[global.save_room] == 1)
+    sprite_index = sSaveBroken
